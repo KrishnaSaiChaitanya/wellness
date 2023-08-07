@@ -1,0 +1,124 @@
+{
+  "kind": "collectionType",
+  "collectionName": "horse_infos",
+  "info": {
+    "singularName": "horse-info",
+    "pluralName": "horse-infos",
+    "displayName": "Horse Info",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "barn_name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "year_of_born": {
+      "type": "integer"
+    },
+    "is_diagnosed": {
+      "type": "boolean"
+    },
+    "discipline": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "Exercise": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "weight": {
+      "type": "integer"
+    },
+    "body_condition": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "trainer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trainer.trainer"
+    },
+    "breeder": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::breeder.breeder"
+    },
+    "is_retired": {
+      "type": "boolean"
+    },
+    "is_pergnent": {
+      "type": "boolean"
+    },
+    "breeding_stock": {
+      "type": "enumeration",
+      "enum": [
+        "Mare ",
+        "Stallion"
+      ]
+    },
+    "Diet": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "is_drylot": {
+      "type": "boolean"
+    },
+    "pharmaceuticals": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "is_metabolic_supplement": {
+      "type": "boolean"
+    },
+    "is_hoof_supplement": {
+      "type": "boolean"
+    },
+    "ownership_logs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ownership-log.ownership-log",
+      "mappedBy": "horse_info"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::owner.owner",
+      "inversedBy": "horse_info"
+    }
+  }
+}

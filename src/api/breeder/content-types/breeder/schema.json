@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "breeders",
+  "info": {
+    "singularName": "breeder",
+    "pluralName": "breeders",
+    "displayName": "Breeder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "breeding_horses": {
+      "type": "integer"
+    },
+    "fouls": {
+      "type": "integer"
+    },
+    "address1": {
+      "type": "richtext"
+    },
+    "adderess2": {
+      "type": "richtext"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "biginteger"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "breeder"
+    },
+    "first_name": {
+      "type": "string",
+      "unique": true
+    },
+    "last_name": {
+      "type": "string"
+    }
+  }
+}

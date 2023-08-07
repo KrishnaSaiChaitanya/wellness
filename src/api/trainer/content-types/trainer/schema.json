@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trainers",
+  "info": {
+    "singularName": "trainer",
+    "pluralName": "trainers",
+    "displayName": "Trainer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "horse_count": {
+      "type": "integer"
+    },
+    "country": {
+      "type": "string"
+    },
+    "address1": {
+      "type": "richtext"
+    },
+    "address2": {
+      "type": "richtext"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "biginteger"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "trainer"
+    }
+  }
+}

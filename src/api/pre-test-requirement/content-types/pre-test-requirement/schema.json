@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pre_test_requirements",
+  "info": {
+    "singularName": "pre-test-requirement",
+    "pluralName": "pre-test-requirements",
+    "displayName": "PreTestRequirement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "is_fasted": {
+      "type": "boolean"
+    },
+    "last_fedtime": {
+      "type": "datetime"
+    },
+    "last_intake": {
+      "type": "datetime"
+    },
+    "sugar_test": {
+      "type": "boolean"
+    }
+  }
+}

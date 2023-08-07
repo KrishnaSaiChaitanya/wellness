@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "veterinarians",
+  "info": {
+    "singularName": "veterinarian",
+    "pluralName": "veterinarians",
+    "displayName": "Veterinarian",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "facility_name": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "adderss1": {
+      "type": "richtext"
+    },
+    "adderess2": {
+      "type": "richtext"
+    },
+    "veterinarians_count": {
+      "type": "integer"
+    },
+    "type_of_facility": {
+      "type": "enumeration",
+      "enum": [
+        "Equine",
+        "Mixed_Animal",
+        "Large_Animal",
+        "Companion_Animal"
+      ]
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "biginteger"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "veterinarian"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_procedures",
+  "info": {
+    "singularName": "test-procedure",
+    "pluralName": "test-procedures",
+    "displayName": "Test Procedure"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "precautions": {
+      "type": "richtext"
+    },
+    "phase1_description": {
+      "type": "richtext"
+    },
+    "phase1_vedio": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "phase1_time": {
+      "type": "integer"
+    },
+    "phase2_description": {
+      "type": "text"
+    },
+    "phase2_vedio": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "phase2_time": {
+      "type": "integer"
+    },
+    "phase3_description": {
+      "type": "richtext"
+    },
+    "phase3_vedio": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "phase3_time": {
+      "type": "integer"
+    }
+  }
+}

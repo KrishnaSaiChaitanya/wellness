@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "owners",
+  "info": {
+    "singularName": "owner",
+    "pluralName": "owners",
+    "displayName": "Owner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "horse_count": {
+      "type": "integer"
+    },
+    "vet_count": {
+      "type": "integer"
+    },
+    "country": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "biginteger"
+    },
+    "address1": {
+      "type": "richtext"
+    },
+    "address2": {
+      "type": "richtext"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "owner"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "horse_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::horse-info.horse-info",
+      "mappedBy": "owner"
+    }
+  }
+}

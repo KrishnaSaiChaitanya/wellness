@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ownership_logs",
+  "info": {
+    "singularName": "ownership-log",
+    "pluralName": "ownership-logs",
+    "displayName": "Ownership Log",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "time_stamp": {
+      "type": "datetime"
+    },
+    "previous_owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::owner.owner"
+    },
+    "current_owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::owner.owner"
+    },
+    "horse_info": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::horse-info.horse-info",
+      "inversedBy": "ownership_logs"
+    },
+    "edited_by": {
+      "type": "json"
+    },
+    "author": {
+      "type": "json"
+    }
+  }
+}
