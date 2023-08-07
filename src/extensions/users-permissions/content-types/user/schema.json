@@ -107,7 +107,8 @@
         "veterinarian",
         "breeder",
         "trainer"
-      ]
+      ],
+      "required": true
     }
   }
 }

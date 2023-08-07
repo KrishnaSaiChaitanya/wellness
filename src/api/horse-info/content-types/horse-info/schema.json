@@ -116,9 +116,9 @@
     },
     "owner": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::owner.owner",
-      "inversedBy": "horse_info"
+      "inversedBy": "horse_infos"
     }
   }
 }

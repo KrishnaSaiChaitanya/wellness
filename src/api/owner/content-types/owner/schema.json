@@ -45,9 +45,9 @@
     "last_name": {
       "type": "string"
     },
-    "horse_info": {
+    "horse_infos": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::horse-info.horse-info",
       "mappedBy": "owner"
     }
