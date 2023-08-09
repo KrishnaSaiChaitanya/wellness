@@ -18,12 +18,6 @@
     "country": {
       "type": "string"
     },
-    "adderss1": {
-      "type": "richtext"
-    },
-    "adderess2": {
-      "type": "richtext"
-    },
     "veterinarians_count": {
       "type": "integer"
     },
@@ -55,6 +49,12 @@
       "type": "string"
     },
     "last_name": {
+      "type": "string"
+    },
+    "address1": {
+      "type": "string"
+    },
+    "address2": {
       "type": "string"
     }
   }

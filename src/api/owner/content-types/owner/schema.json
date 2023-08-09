@@ -27,12 +27,6 @@
     "postal_code": {
       "type": "biginteger"
     },
-    "address1": {
-      "type": "richtext"
-    },
-    "address2": {
-      "type": "richtext"
-    },
     "user": {
       "type": "relation",
       "relation": "oneToOne",
@@ -50,6 +44,12 @@
       "relation": "oneToMany",
       "target": "api::horse-info.horse-info",
       "mappedBy": "owner"
+    },
+    "address1": {
+      "type": "string"
+    },
+    "address2": {
+      "type": "string"
     }
   }
 }
