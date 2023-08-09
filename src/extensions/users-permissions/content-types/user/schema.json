@@ -109,6 +109,12 @@
         "trainer"
       ],
       "required": true
+    },
+    "result": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::result.result",
+      "mappedBy": "conducted_by"
     }
   }
 }

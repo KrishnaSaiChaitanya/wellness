@@ -4,7 +4,8 @@
   "info": {
     "singularName": "test-procedure",
     "pluralName": "test-procedures",
-    "displayName": "Test Procedure"
+    "displayName": "Test Procedure",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,24 +19,23 @@
       "type": "richtext"
     },
     "phase1_vedio": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "phase1_time": {
       "type": "integer"
     },
-    "phase2_description": {
-      "type": "text"
-    },
     "phase2_vedio": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "phase2_time": {
       "type": "integer"
@@ -44,14 +44,18 @@
       "type": "richtext"
     },
     "phase3_vedio": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "phase3_time": {
       "type": "integer"
+    },
+    "phase2_description": {
+      "type": "richtext"
     }
   }
 }

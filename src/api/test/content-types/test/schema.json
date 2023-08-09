@@ -4,10 +4,11 @@
   "info": {
     "singularName": "test",
     "pluralName": "tests",
-    "displayName": "Test"
+    "displayName": "Test",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

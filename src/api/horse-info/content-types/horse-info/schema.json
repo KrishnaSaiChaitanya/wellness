@@ -119,6 +119,12 @@
       "relation": "manyToOne",
       "target": "api::owner.owner",
       "inversedBy": "horse_infos"
+    },
+    "results": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::result.result",
+      "mappedBy": "horse_info"
     }
   }
 }

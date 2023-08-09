@@ -4,28 +4,71 @@
   "info": {
     "singularName": "result",
     "pluralName": "results",
-    "displayName": "Result"
+    "displayName": "Result",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "value": {
       "type": "string"
     },
     "remark": {
       "type": "richtext"
+    },
+    "pre_test_requirement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pre-test-requirement.pre-test-requirement",
+      "mappedBy": "result"
+    },
+    "horse_info": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::horse-info.horse-info",
+      "inversedBy": "results"
+    },
+    "test_kit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::test-kit.test-kit",
+      "inversedBy": "results"
+    },
+    "is_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Verified",
+        "Pending",
+        "Remarks"
+      ]
+    },
+    "conducted_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "result"
+    },
+    "current_owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::owner.owner"
     }
   }
 }

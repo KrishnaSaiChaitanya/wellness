@@ -4,10 +4,11 @@
   "info": {
     "singularName": "pre-test-requirement",
     "pluralName": "pre-test-requirements",
-    "displayName": "PreTestRequirement"
+    "displayName": "PreTestRequirement",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -22,6 +23,12 @@
     },
     "sugar_test": {
       "type": "boolean"
+    },
+    "result": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::result.result",
+      "inversedBy": "pre_test_requirement"
     }
   }
 }
