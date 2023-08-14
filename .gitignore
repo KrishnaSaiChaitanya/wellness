@@ -7,10 +7,10 @@
 .LSOverride
 Icon
 .Spotlight-V100
+node_modules
 .Trashes
 ._*
-
-
+*node_modules/*
 ############################
 # Linux
 ############################
